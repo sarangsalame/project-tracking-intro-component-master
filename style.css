@@ -1,0 +1,365 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height:100vh;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-weight: 400;
+    Font-size: 18px;
+    overflow: hidden;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* ### Headings, Call-to-actions, Navigation
+
+- Family: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed)
+- Weights: 400, 700 */
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    z-index: 10;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    cursor: pointer;
+}
+.icon img{
+    margin: 0 20%;
+}
+.back-blue{
+    z-index: -5;
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    width: 50%;
+    height: 50%;
+    background-color: hsl(207, 33%, 95%);
+    border-bottom-left-radius: 70px;
+}
+.menu{
+    /* padding: 0 20px; */
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main-menu li{
+    margin: 0 20px;
+    list-style: none;
+    width: 70px;
+    
+}
+.main-menu li a{
+    color: hsl(230, 29%, 20%);
+    font-family: 'Barlow Condensed', sans-serif;
+    cursor: pointer;
+}
+/* .dot{
+    width: 5px;
+    height: 5px;
+    background-color: blue;
+    border-radius: 50%;
+} */
+.login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+}
+.login a{
+    cursor: pointer;
+    color: hsl(231, 7%, 65%);
+}
+
+
+/* main section  */
+main{
+    width: 100%;
+    height:50vh ;
+    height: calc(100vh);
+    display: flex;
+    margin-top: 4%;
+}
+main .text-content{
+    width: 50%;
+    margin: 0 10%;
+    margin-top: 2%;
+    margin-right: 50px;
+    /* height: 100%; */
+}
+main .text-content .button-type{
+    width: 60px;
+    background-color: hsl(230, 29%, 20%);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.heading4{
+    display: inline;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: grey;
+    letter-spacing: 3px;
+    font-size: 20px;
+    
+}
+
+.main-heading{
+    text-transform: uppercase;
+    margin: 30px 0;
+    font-size: 45px;
+    color: hsl(230, 29%, 20%);
+    width: 70%;
+}
+main .text-content .para{
+    color: grey;
+    font-size: 18px;
+    font-weight: 400;
+    width: 60%;
+    margin-bottom: 40px;
+    font-family: 'Barlow', sans-serif;
+}
+main .text-content .btn{
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: hsl(0, 100%, 68%);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    width: 35%;
+    height: 40px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+main .text-content .btn:hover{
+    background-color: hsl(0, 79%, 71%);
+}
+
+main .image-content{
+    width: 50%;
+    height: 60%;
+    
+    background-image: url('./images/illustration-devices.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 5% 0;
+    /* height:100%; */
+    z-index: 10;
+}
+.hamburger{
+    display: none;
+}
+.close{
+    display: none;
+}
+.hamburger button, .close button{
+    background-color: transparent;
+    border: none;  
+}
+.card{
+    z-index: 15;
+    position: absolute;
+    right: 20px;
+    top:110px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px -5px, rgba(0, 0, 0, 0.4) 0px 10px 10px -5px;
+    
+}
+.card hr{
+    width: 100%;
+    color: grey;
+    
+}
+
+.card ul, .login-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    
+}
+.card ul li{
+      
+    list-style: none;
+    width: 100%;
+    height: 50px;
+
+}
+.card ul li a,.login-menu{
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.login-menu{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.login-menu a{
+    cursor: pointer;
+    color: hsl(231, 7%, 65%);
+}
+.hide-card{
+    display: none;
+}
+
+
+
+/* media querries for variable screens */
+
+
+@media (max-width:950px) {
+    .hamburger .button{
+    background: transparent;
+    border: none;
+    
+}
+.heading4{
+    font-size: 15px;
+    
+}
+main .text-content .btn{
+        width: 150px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .menu ul, .menu .login{
+        display: none;
+    }
+    .menu{
+        justify-content: flex-end;
+        position: relative; 
+    }
+    
+    .hamburger, .close{
+        position: absolute;
+        right: 50px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .ham{
+    display: none;
+    }
+    .clo{
+        display: block;
+    }
+    main{
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+
+    body{
+        overflow: scroll;
+    }
+    header{
+        height: 12%;
+    }
+    main .text-content , main .image-content{
+        /* border: 2px solid red ;   */
+        width: 100%;
+        height: 50vh;
+        
+    }
+    main .text-content {
+        padding : 50px;
+    }
+    main .text-content .btn{
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
+
+
+@media (max-width:400px) {
+    main .text-content {
+        height:auto;
+        padding: 0 20px;
+        /* align-items: center; */
+    }  
+    .container{
+        overflow: hidden;
+    }
+    main .image-content{
+        margin-top: 20px;
+        height: 30vh;
+        margin-bottom: 50px;
+        /* background-size: 100% 100%; */
+    } 
+    main{
+        margin-left: 17px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .main-heading{
+        width: 100%;
+        margin: 20px 0;
+        font-size: 35px;
+    }
+    main .text-content .para{
+        
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    main .text-content .btn{
+        font-size: 15px;
+        width: 120px;
+    }
+    
+}
